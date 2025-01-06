@@ -37,7 +37,7 @@ class CalendarPolicy
      */
     public function update(User $user, Calendar $calendar): bool
     {
-        //
+        return $user->id === $calendar->user_id;
     }
 
     /**

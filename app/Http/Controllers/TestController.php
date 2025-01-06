@@ -138,8 +138,6 @@ class TestController extends Controller
     public function edit(Test $test)
     {
 
-        Gate::authorize('update', $test);
-
 
         $tags = Tag::all(); //tagは更新画面に選択肢すべて出すため、select*from tag_table
         $selectedTags = $test->tags->pluck('id')->all(); //中間テーブルからtagのidをとってくる
@@ -188,7 +186,6 @@ class TestController extends Controller
      */
     public function update(Request $request, Test $test)
     {
-        Gate::authorize('update', $test);
 
         // メッセージ内容を更新
         $test->update([
@@ -205,7 +202,6 @@ class TestController extends Controller
      */
     public function destroy(Test $test)
     {
-        Gate::authorize('delete', $test);
 
 
         $test->tags()->detach();

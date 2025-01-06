@@ -8,7 +8,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
 use Illuminate\Support\Facades\Gate;
-use Carbon\Carbon;  // Carbonをインポート
+use Carbon\Carbon;  // Carbonをインポート(datetimeを継承した日時を扱うクラス)
 
 
 

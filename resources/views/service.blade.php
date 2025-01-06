@@ -120,6 +120,7 @@
                     </tr>
                 </thead>
                 @foreach($calendars as $calendar) 
+                @can('update', $calendar)
                     <tr>
                         <td>{{$calendar->number}}</td>
                         <td>{{$calendar->event_name}}</td> 
@@ -158,6 +159,7 @@
                                 </div>
                             </div>
                     </div>
+                @endcan
                 @endforeach
             </table>
 
